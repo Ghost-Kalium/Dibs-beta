@@ -36,18 +36,18 @@ export default function TrendingSection() {
   ];
 
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-8 sm:py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-black mb-8">
-          Trending in<span className="text-gray-400">Your Area</span>
+        <h2 className="text-2xl sm:text-3xl font-bold text-black mb-6 sm:mb-8">
+          Trending in<span className="text-gray-400"> Your Area</span>
         </h2>
 
-        <div className="flex gap-4 mb-8 overflow-x-auto pb-2">
+        <div className="flex gap-2 sm:gap-4 mb-6 sm:mb-8 overflow-x-auto pb-2 scrollbar-hide">
           {filters.map((filter) => (
             <button
               key={filter.value}
               onClick={() => setActiveFilter(filter.value)}
-              className={`whitespace-nowrap px-4 py-2 rounded text-sm font-medium transition ${
+              className={`whitespace-nowrap px-3 sm:px-4 py-2 rounded text-xs sm:text-sm font-medium transition ${
                 activeFilter === filter.value
                   ? 'bg-black text-white'
                   : 'text-gray-700 hover:text-black'
@@ -59,13 +59,13 @@ export default function TrendingSection() {
         </div>
 
         {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[...Array(4)].map((_, i) => (
               <div key={i} className="h-64 bg-gray-100 rounded animate-pulse" />
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {services.map((service) => (
               <ServiceCard key={service.id} service={service} />
             ))}
