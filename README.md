@@ -6,7 +6,7 @@ A modern, fully-functional service marketplace web application built with React,
 
 Dibs is a responsive platform that connects service providers with customers. Users can discover, explore, and book various services across multiple categories including creative studios, personal training, meeting rooms, art classes, catering, accommodation, transportation, and childcare.
 
-## Features
+##  Features
 
 ### Core Functionality
 - **Service Discovery**: Browse services across 8+ categories with intuitive filtering
